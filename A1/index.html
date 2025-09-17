@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Data Vis Assignment 1</title>
+	<link rel="stylesheet" href="https://dig.cmu.edu/datavis-fall-2024/assignments/report.css" />
+    <link rel="stylesheet" href="../style.css"> 
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html">Home</a><br>
+        <a href="../contact/index.html">Contact</a><br>
+        <a class="current" href="../projects/index.html">Projects</a><br>
+        
+    </nav>
+
+	<header>
+		<h1>
+			<small>Assignment 1</small>
+			Exploratory Data Analysis
+		</h1>
+
+		<p>
+			<strong>Chenmiao Shi</strong> — <em>chenmias@andrew.cmu.edu</em>
+		</p>
+	</header>
+	<main>
+		<section>
+			<h2>Subtheme: <br>Fatal Accidental Overdose In Allegheny County From 2007 to 2025<br></h2>
+
+			<h3>Overall Analysis Questions</h3>
+			<ol>
+				<li><strong>GENERAL TREND</strong>
+                    <br>How has the number of fatal overdoses changed over time?
+                    <br>Following up: 
+                    Are there time related patterns? (Monthly/seasonly/daily/hourly)<br>
+                    <div class="motivation">Motivations:<br>
+                    I wanted to know if COVID has any impact on fatal overdose increase.<br>
+                    I also wondered if season change has any impact on fatal overdose increase as well.</div>
+                </li><br>
+				<li><strong>GEOGRAPHIC</strong>
+                    <br>Are there geographic hotspots of overdoses?<br>
+                    Following up:
+                    How does it change over time?<br>
+                    <div class="motivation">Motivations:<br>
+                    Because I personally live in Allegheny County, I want to know if there’s any hotspot near me.<br> 
+                    (and if CMU is an overdose hotspot, I guess it is).</div>
+                </li><br>
+				<li><strong>GEOGRAPHIC</strong>
+                    <br>Which drugs are most commonly associated with fatal overdoses?<br>
+                    Following Up:
+                    How has the presence of the frequently involved drugs changed over time?<br>
+                    And how often do overdoses involve multiple substances? Single substance?<br>
+                    <div class="motivation">Motivations:<br>
+                    When I was in high school in Maryland, several fatal overdoses happened in my community. As an international student with little prior knowledge of drugs in the U.S., those incidents left a strong impression on me and made me want to better understand which substances can be deadly.</div><br> 
+                </li>
+				
+			</ol>
+		</section>
+
+		<section>
+			<h2>Discoveries & Insights</h2>
+            <p class="caption">   
+                We begin the exploration by understanding the timely trend of fatal accidental overdose, studying individual variables, and addressing data quality issues.
+            </p>
+			<figure>
+				<img src="../images/Annual Fatal Overdoses in Allegheny County From 2007 to 2025.png" alt="Annual Fatal Overdoses in Allegheny County From 2007 to 2025" />
+				<figcaption>
+				This line chart shows the number of fatal accidental overdose for each year from 2007 to 2025. We observe an overall increase from 2007 to 2023, within this period, 2016 and 2017 were significantly higher than other years. After 2023, the number began to decline, continuing into present (2025).
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img class="smallerImg" src="../images/Fatal Accidental Overdose By Month.png" alt="Fatal Accidental Overdose By Month" />
+				<figcaption>
+				This chart shows fatal accidental overdoses by month, with numbers staying relatively steady across the year and peaking slightly in April, suggesting no strong seasonal trend. 
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img class="smallerImg2" src="../images/Fatal Accidental Overdose By Weekdays.png" alt="Fatal Accidental Overdose By Weekdays" />
+				<figcaption>
+				This chart shows fatal accidental overdoses by weekday, showing that fatalities are somewhat lower on Mondays and Tuesdays and higher toward the end of the week. Saturday stands out as the peak day, with the highest number of overdoses. 
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="../images/Fatal Overdoses By Time of Day in Allegheny County From 2007 to 2025.png" alt="Fatal Overdoses By Time of Day in Allegheny County From 2007 to 2025" />
+				<figcaption>
+				This chart shows fatal accidental overdoses by time of day. Overdoses are least common at midnight (2–5 AM), then rise sharply starting around 6 AM. The highest numbers occur late morning to early afternoon,and after that, cases remain relatively high through the afternoon before gradually declining into the evening and night.
+				</figcaption>
+			</figure>
+            <strong>GEOGRAPHIC</strong>
+			<figure>
+				<img src="../images/Fatal Accidental Overdose in Dataset By Zip Code From 2007 to 2025.png" alt="Fatal Accidental Overdose in Dataset By Zip Code From 2007 to 2025" />
+				<figcaption>
+				Data Quality Issue:
+                From this visualization, areas in blue represent the zip codes within Allegheny County, and areas in orange represent the zip codes outside of Allegheny County. We observed that there’s a significant amount of false inputs of zip codes that lie outside of Allegheny county, and 13 missing/unknown inputs of zip codes that cannot be represented on the map. To address this, we added a filter in Tableau to filter out the zip codes outside of Allegheny County.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="../images/Fatal Accidental Overdose In Allegheny County By Zip Code From 2007 to 2025.png" alt="Fatal Accidental Overdose In Allegheny County By Zip Code From 2007 to 2025" />
+				<figcaption>
+				To explore where overdose most frequently occurs, we mapped out the geographic distribution of fatal accidental overdoses in Allegheny County by zip code from 2007 to 2025. The darkest areas highlight overdose “hotspots,” with 15210 and 15212 emerging as the most affected locations. Several other zip codes—such as 15136, 15216, 15227, 15219, 15206, 15235, 15221, and 15132—appear as secondary hotspots. 
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img class="smallerImg3" src="../images/Fatal Accidental Overdose In Allegheny County By Zip Code From 2007 to 2013.png" alt="Fatal Accidental Overdose In Allegheny County By Zip Code From 2007 to 2013" />
+				<img class="smallerImg3" src="../images/Fatal Accidental Overdose In Allegheny County By Zip Code From 2014 to 2019.png" alt="Fatal Accidental Overdose In Allegheny County By Zip Code From 2014 to 2019" />
+                <img class="smallerImg3" src="../images/Fatal Accidental Overdose In Allegheny County By Zip Code From 2020 to 2025.png" alt="Fatal Accidental Overdose In Allegheny County By Zip Code From 2020 to 2025" />
+                <figcaption>
+				Observing the hotspot across years (2007-2013, 2013-2019, 2019-2025), the data shows that 15210 and 15212 consistently remain the primary hotspots of overdoses.
+				</figcaption>
+			</figure>
+            <strong>DRUGS</strong>
+            <p class="caption">We began with inspecting the chemical name of drugs using filter in excel, and we discovered the following data quality issue:<br>
+
+                - Inconsistent naming: 1,1-Difluoroethane and Difluoroethane as two separate entries are likely the same chemical but with different naming.<br>
+                - Multiple substances in one field: “Citalopram/Escitalopram” two drugs reported in one entry instead of separate fields<br>
+                - Both drug classes and specific substances appeared as entries: Synthetic Cannabinoid vs. 4-fluoro-MDMB-BINACA (a specific synthetic cannabinoid)<br>
+                - Non-drug or unclear entries like Carbon Monoxide, which is technically a cause of death, but not a “drug” in the conventional sense.<br>
+
+            After identifying the data issues, we began exploring what are the most frequently involved drugs in fatal accidental overdose in Allegheny County from 2007 to 2025.<br>
+            </p>
+			<figure>
+				<img src="../images/Top 10 Drugs Involved In Fatal Accidental Overdose In Allegheny County From 2007 to 2025.png" alt="Top 10 Drugs Involved In Fatal Accidental Overdose In Allegheny County From 2007 to 2025" />
+				<figcaption>
+				In this visualization, we figured that Fentanyl dominates the list, with cocaine, heroin, and alcohol also appearing frequently. Bars count substance mentions per case, so entries aren’t mutually exclusive—many cases list several drugs. The pattern points to fentanyl-led composition with heavy co-occurrence among the top substances.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img class="smallerImg" src="../images/Poly-drug Overdose vs. Mono-drug Overdose.png" alt="Poly-drug Overdose vs. Mono-drug Overdose" />
+				<figcaption>
+				This visualization compares the number of poly-drug overdose cases (cases where multiple substances were involved) with mono-drug overdose cases (cases involving only one substance). The results show a large imbalance, which indicates that the majority of fatal accidental overdoses in Allegheny County involved combinations of drugs rather than a single substance.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="../images/Trends in Leading Drugs Involved in Fatal Overdoses in Allegheny County From 2007 to 2025.png" alt="Trends in Leading Drugs Involved in Fatal Overdoses in Allegheny County From 2007 to 2025" />
+				<figcaption>
+				This line chart tracks the top drugs involved in fatal overdoses in Allegheny County from 2007 to 2025. Fentanyl shows the sharpest rise, spiking around 2016 and remaining the leading cause through the 2020s despite some fluctuations. Heroin increased steadily until 2016 but then declined sharply after 2017. Cocaine also rose significantly in the 2010s and peaked around 2022, while alcohol stayed relatively steady at lower levels compared to the other substances.
+				</figcaption>
+			</figure>
+
+            <figure>
+				<img src="../images/By Gender From 2007 to 2025 1.png" alt="Fatal Accidental Overdose In Allegheny County By Gender From 2007 to 2025 Bar Chart" />
+				<img src="../images/By Gender From 2007 to 2025 2.png" alt="Fatal Accidental Overdose In Allegheny County By Gender From 2007 to 2025 Area Chart" />
+                <figcaption>
+				The first stacked bar chart highlights that males (5,151 cases) had more than twice the number of overdoses compared to females (2,327 cases). The second area chart shows the yearly trend, indicating male cases consistently outnumber female cases across the entire time period.
+				</figcaption>
+			</figure>
+            <strong>AGE</strong>
+            <figure>
+				<img src="../images/By Age.png" alt="Fatal Accidental Overdose In Allegheny County By Age From 2007 to 2025" />
+                <figcaption>
+				This chart shows that the majority of cases fall between the early 30s and early 50s, with overdoses peaking around ages 34 and 52. Fewer cases occur at younger ages (under 20) and older ages (above 70), where the numbers gradually decline. Overall, the data highlights middle-aged adults as the most affected group.
+				</figcaption>
+			</figure>
+            <figure>
+				<img src="../images/By Race 1.png" alt="Fatal Accidental Overdose By Race In Allegheny County From 2007 to 2025 Bubble Chart" />
+				<img src="../images/By Race 2.png" alt="Fatal Accidental Overdose By Race In Allegheny County From 2007 to 2025 Bar Chart" />
+                <figcaption>
+				This visualization shows fatal accidental overdoses in Allegheny County by race from 2007 to 2025. White individuals account for the overwhelming majority (5,927 cases), followed by Black individuals (1,461 cases), while all other racial groups have much smaller numbers. The bubble chart emphasizes the stark contrast between White and Black populations compared to others.
+				</figcaption>
+			</figure>
+		</section>
+
+		<section>
+			<h2>Summary</h2>
+
+			<p>In this project I looked at when, where, and what’s involved in fatal overdoses in Allegheny County (2007–2025). Yearly totals rise to a clear peak in 2016–2017, stay high for a while, and start to dip after 2023. Counts are lower on Monday–Tuesday and higher toward the weekend, especially Saturday. By time of day, the low point is around 2–5 AM; numbers climb after 6 AM and are highest from late morning into the afternoon. I don’t see a strong month-to-month seasonal pattern. <br><br>
+               On the map, 15210 and 15212 stand out as persistent hotspots, with several nearby ZIPs as secondary clusters. Fentanyl leads the substance list, and most cases involve more than one drug. Men appear more often than women, and most cases are in people in their 30s–50s. I standardized some drug names; and 2025 is still updating. If I continue, I’d normalize by population, dig into common drug combinations.</p>
+		</section>
+	</main>
+</body>
+</html>

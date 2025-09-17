@@ -6,8 +6,6 @@ body {
     accent-color: var(--color-accent);
 }
 
-
-
 form {
     display: block;
     width: 100%;
@@ -53,4 +51,29 @@ nav {
     border-bottom: 0.4em;
     border-bottom-style: solid;
     border-bottom-color: oklch(80% 3% 200);
+}
+
+.motivation{
+    color: grey;
+}
+
+img {
+    width: 100%;
+}
+
+.caption{
+    color: rgb(121, 121, 121);
+    Font-size: small;
+}
+
+.smallerImg{
+    width: 80%;
+}
+
+.smallerImg2{
+    width: 50%;
+}
+
+.smallerImg3{
+    width: 33%;
 }
