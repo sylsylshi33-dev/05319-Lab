@@ -1,3 +1,56 @@
 body {
- font: 100%/1.5 system-ui;
+    font: 100%/1.5 system-ui;
+    width: 100ch;
+    margin-inline: auto;
+    padding: 50;
+    accent-color: var(--color-accent);
+}
+
+
+
+form {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    label {
+        display: block;
+        margin-block: 1em;
+    }
+    button,input,textarea{
+        font: inherit;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.5em;
+}
+}
+
+:root {
+  --color-accent: oklch(76.017% 0.12596 252.997);
+}
+
+nav {
+    display: flex;
+    margin-bottom: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: oklch(80% 3% 200);
+    a{
+        flex: 1;
+        text-decoration: none;
+        color: inherit;
+        text-align: center;
+        padding: 0.5em;
+    }
+    a:hover{
+        border-bottom: 0.4em;
+        border-bottom-style: solid;
+        border-bottom-color: var(--color-accent);
+        background-color: oklch(from var(--color-accent) 95% 5% h);
+    }
+}
+
+.current {
+    border-bottom: 0.4em;
+    border-bottom-style: solid;
+    border-bottom-color: oklch(80% 3% 200);
 }
